@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Identidad de marca | Hogwarts</title>
+  <meta name="description" content="Guía de identidad visual: paleta, tipografía, componentes y voz de la landing de Hogwarts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-house="gryffindor">
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top">Hogwarts <span>· Identidad</span></a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#esencia">Esencia</a>
+      <a href="#paleta">Paleta</a>
+      <a href="#tipografia">Tipografía</a>
+      <a href="#componentes">Componentes</a>
+      <a href="#voz">Voz</a>
+      <a href="#cta-admision" class="btn btn--small">Admisión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Guía de identidad visual</p>
+      <h1>Bienvenido al <em>mundo mágico</em></h1>
+      <p class="lead">Una marca hecha de pergamino, velas y estrellas. Este documento reúne los colores, tipografías, componentes y el tono de voz de la landing.</p>
+      <div class="hero__actions">
+        <a href="#paleta" class="btn">Ver la paleta</a>
+        <a href="#cta-admision" class="btn btn--ghost">Ir a admisión</a>
+      </div>
+    </section>
+
+    <section id="esencia" class="section reveal">
+      <h2>Esencia de marca</h2>
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Tradición</h3>
+          <p>Siglos de historia. Serifas clásicas, pergamino, dorados envejecidos y bordes ornamentados.</p>
+        </article>
+        <article class="card">
+          <h3>Asombro</h3>
+          <p>Cada interacción debe sentirse como un pequeño hechizo: brillos sutiles, transiciones suaves.</p>
+        </article>
+        <article class="card">
+          <h3>Pertenencia</h3>
+          <p>Cuatro casas, una comunidad. El color de acento cambia según la casa elegida.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="paleta" class="section reveal">
+      <h2>Paleta de color</h2>
+      <p class="section__intro">Haz clic en un color para copiar su código. Los botones de casa cambian el acento de toda la página.</p>
+
+      <div class="houses" role="group" aria-label="Elegir casa">
+        <button class="house-btn is-active" data-house="gryffindor">Gryffindor</button>
+        <button class="house-btn" data-house="slytherin">Slytherin</button>
+        <button class="house-btn" data-house="ravenclaw">Ravenclaw</button>
+        <button class="house-btn" data-house="hufflepuff">Hufflepuff</button>
+      </div>
+
+      <h3 class="sub">Base</h3>
+      <div class="swatches">
+        <button class="swatch" data-hex="#0B0B1A" style="--c:#0B0B1A"><span>Noche</span><code>#0B0B1A</code></button>
+        <button class="swatch" data-hex="#16162E" style="--c:#16162E"><span>Medianoche</span><code>#16162E</code></button>
+        <button class="swatch swatch--light" data-hex="#F1E6CC" style="--c:#F1E6CC"><span>Pergamino</span><code>#F1E6CC</code></button>
+        <button class="swatch swatch--light" data-hex="#D4AF37" style="--c:#D4AF37"><span>Oro antiguo</span><code>#D4AF37</code></button>
+      </div>
+
+      <h3 class="sub">Casas</h3>
+      <div class="swatches">
+        <button class="swatch" data-hex="#9B1C1C" style="--c:#9B1C1C"><span>Gryffindor</span><code>#9B1C1C</code></button>
+        <button class="swatch" data-hex="#1F6B45" style="--c:#1F6B45"><span>Slytherin</span><code>#1F6B45</code></button>
+        <button class="swatch" data-hex="#2B4C9B" style="--c:#2B4C9B"><span>Ravenclaw</span><code>#2B4C9B</code></button>
+        <button class="swatch swatch--light" data-hex="#E8B923" style="--c:#E8B923"><span>Hufflepuff</span><code>#E8B923</code></button>
+      </div>
+    </section>
+
+    <section id="tipografia" class="section reveal">
+      <h2>Tipografía</h2>
+      <div class="grid grid--2">
+        <article class="card">
+          <p class="meta">Títulos · Cinzel Decorative</p>
+          <p class="specimen specimen--display" id="specimen" contenteditable="true" spellcheck="false">Hogwarts</p>
+          <p class="hint">Edita el texto para probar la tipografía.</p>
+        </article>
+        <article class="card">
+          <p class="meta">Subtítulos · Cinzel</p>
+          <p class="specimen specimen--sub">Escuela de Magia y Hechicería</p>
+          <p class="meta">Texto · Cormorant Garamond</p>
+          <p class="specimen specimen--body">Las puertas del castillo se abren al caer la tarde y las velas flotan sobre el Gran Comedor.</p>
+          <p class="meta">Interfaz · Inter</p>
+          <p class="specimen specimen--ui">Botones, etiquetas y formularios.</p>
+        </article>
+      </div>
+      <label class="slider">Tamaño del título
+        <input type="range" id="sizeRange" min="32" max="120" value="72" />
+      </label>
+    </section>
+
+    <section id="componentes" class="section reveal">
+      <h2>Componentes</h2>
+      <div class="grid grid--2">
+        <article class="card">
+          <h3>Botones</h3>
+          <div class="row">
+            <a href="#cta-admision" class="btn">Solicitar admisión</a>
+            <a href="#" class="btn btn--ghost" data-noop>Secundario</a>
+            <span class="badge">Nuevo curso</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Tarjeta de curso</h3>
+          <div class="course">
+            <span class="badge">Primer año</span>
+            <h4>Pociones</h4>
+            <p>Mezcla, precisión y paciencia. Lunes y jueves, mazmorras.</p>
+          </div>
+        </article>
+        <article class="card card--wide">
+          <h3>Formulario</h3>
+          <form class="form" id="demoForm" novalidate>
+            <label>Nombre del aspirante<input type="text" name="nombre" placeholder="Tu nombre" required /></label>
+            <label>Correo<input type="email" name="correo" placeholder="lechuza@correo.com" required /></label>
+            <button class="btn" type="submit">Enviar lechuza</button>
+            <p class="form__msg" role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section id="voz" class="section reveal">
+      <h2>Voz y tono</h2>
+      <div class="grid grid--2">
+        <article class="card">
+          <h3>Sí</h3>
+          <p>Cálido, solemne con un guiño de humor. Frases cortas, metáforas de magia, invitación directa.</p>
+          <blockquote>“Tu carta ya está en camino. Solo falta que la abras.”</blockquote>
+        </article>
+        <article class="card">
+          <h3>No</h3>
+          <p>Jerga corporativa, signos de exclamación en exceso, promesas absolutas o tono infantil.</p>
+          <blockquote class="no">“¡¡Inscríbete YA y obtén beneficios increíbles!!”</blockquote>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta-admision" class="section cta reveal">
+      <h2>Tu carta de admisión te espera</h2>
+      <p class="section__intro">Este bloque reproduce el llamado a la acción principal de la landing.</p>
+      <a href="#top" class="btn btn--big">Comenzar admisión</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Proyecto de fans sin fines comerciales. Harry Potter y Hogwarts son marcas de sus respectivos titulares.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
